@@ -1,0 +1,230 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+li {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+button {
+	border: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.conteiner {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+body {
+	background-image: linear-gradient(to right, #000000 0%, #b49191 100%);
+}
+
+nav .off:hover {
+	padding-bottom: 5px;
+	border-bottom: 1px solid red;
+	color: red;
+	transition: border-bottom 2s ease 0s, color 2s ease 0s;
+}
+
+nav .nav {
+	padding-top: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+}
+
+nav .nav .full {
+	padding-top: 15px;
+	background-image: linear-gradient(to right, #000000 0%, #b49191 100%);
+	z-index: 1;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	justify-content: center;
+	align-items: center;
+}
+
+nav .nav #logo {
+	max-width: 120px;
+}
+
+nav .nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+nav .nav ul li {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+nav .nav ul li a {
+	font-family: FontAwesome;
+	padding-bottom: 5px;
+	transition: border-bottom 2s ease 0s, color 2s ease 0s;
+}
+
+nav .nav ul li a.span {
+	margin-left: 5px;
+}
+
+nav .nav ul li a:hover {
+	border-bottom: 1px solid red;
+	color: red;
+}
+
+nav .nav ul li a:hover > span {
+	color: red;
+}
+
+nav .nav ul:not(.menu) {
+	font-size: 20px;
+}
+
+nav .nav ul.adantiv li {
+	display: none;
+}
+
+nav .nav form {
+	display: none;
+}
+
+nav .nav form.poick input {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+nav .nav form.baluta li {
+	margin-bottom: 10px;
+}
+
+form.registration {
+	margin-top: 50px;
+	width: calc(58.333333333333336% - 30px);
+	margin-left: auto;
+	color: white;
+}
+
+form.registration label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+form.registration label span {
+	margin-left: 10px;
+	color: red;
+}
+
+form.registration a {
+	display: block;
+	color: green;
+	margin-bottom: 20px;
+	transition: font-size 1.2s ease, color 1.2s linear;
+}
+
+form.registration a:hover {
+	font-size: 20px;
+	color: white;
+}
+
+@media screen and (max-width: 960px) {
+
+nav .nav ul.menu {
+	display: none;
+}
+
+nav .nav ul.adantiv li:first-child {
+	display: block;
+}
+
+nav .nav ul.full li {
+	margin-bottom: 10px;
+}
+
+nav .nav ul.full li a {
+	font-size: 20px;
+}
+
+}
+
+@media screen and (max-width: 560px) {
+
+.conteiner {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+nav .nav #logo {
+	max-width: 80px;
+}
+
+nav .nav ul.nactroiki {
+	display: none;
+}
+
+nav .nav ul.nactroiki li:first-child {
+	display: none;
+}
+
+nav .nav ul.adantiv li {
+	display: block;
+}
+
+nav .nav ul:not(.adantiv) {
+	flex-direction: column;
+}
+
+nav .nav ul:not(.menu) {
+	font-size: 16px;
+}
+
+nav .nav form {
+	flex-direction: column;
+}
+
+nav .nav form label {
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+}
+
+nav .nav form label input {
+	margin: 15px 0px;
+}
+
+}
+
+@media screen and (max-width: 390px) {
+
+nav .nav #logo {
+	max-width: 75px;
+}
+
+nav .nav ul li a span {
+	display: none;
+}
+
+}
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width">
+     <link rel="stylesheet" type="text/css" href="css/main.css">
+     <link rel="stylesheet" type="text/css" href="css/fonts.css">
+</head>
+<body>
+    <%- include('nav.ejs');%>
+    <div class="conteiner">
+        <form action="" class="registration" method="POST">
+            <a href="">Авторизироваться</a>
+            <label for="" id='surname'>
+                <p>Введите фамилию</p>
+                <input type="text" name='surname'>
+                <span></span>
+            </label>
+            <label for=""id='name'>
+                <p>Введите имя</p>
+                <input type="text" name="name">
+                <span></span>
+            </label>
+            <label for="" id ='login'>
+                <p>Введите логин</p>
+                <input type="text" name="login">
+                <span></span>
+            </label>
+            <label for="" id='email'>
+                <p>Введите email</p>
+                <input type="email" name="email">
+                <span></span>
+            </label>
+            <label for="" id='password'>
+                <p>Введите пароль</p>
+                <input type="password" name="password">
+                <span></span>
+            </label>
+            <label for="" id = "password_2">
+                <p>Повторно введите пароль</p>
+                <input type="password" name = "password_2">
+                <span></span>
+            </label>
+            <button type="submit">Зарегистрироваться</button>
+        </form> 
+    </div> 
+</body>
+<script src="js/nav.js"></script>
+</html>

@@ -1,0 +1,196 @@
+@import 'smart-grid.less';
+@import 'reset.less';
+@font_iconka: FontAwesome;
+.conteiner{
+    .wrapper();
+}
+
+ 
+body{
+    background-image: linear-gradient(to right, #000000 0%, #b49191 100%);
+}
+ 
+nav{
+    .off:hover{
+        padding-bottom: 5px;
+        border-bottom: 1px solid red;
+        color: red;
+        transition: border-bottom 2s ease  0s , color 2s ease  0s ;
+    }
+    .nav{
+        padding-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color:#fff;
+        .full{ // для адаптивки показать на весь экран
+            padding-top: 15px;
+            background-image: linear-gradient(to right, #000000 0%, #b49191 100%);
+            z-index: 1;
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            justify-content:center;
+            align-items: center;
+        }
+        #logo{
+            max-width: 120px;
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            li{
+                .col-offsets(margin);
+                a{
+                    font-family: @font_iconka;
+                    padding-bottom: 5px;
+                    transition: border-bottom 2s ease  0s , color 2s ease  0s ;
+                    &.span{
+                        margin-left: 5px;
+                    }
+                    //  hover
+                    &:hover{
+                        border-bottom: 1px solid red;
+                        color: red;
+                        & >span{
+                            color: red;
+                        }
+                    }
+                    //  hover
+                }
+            }
+            &:not(.menu){ //  размер иконок
+                font-size: 20px;
+            }
+            &.adantiv,{ // меню в адаптивке
+                li{
+                    display: none;
+                }
+            }
+        }
+        form{
+            display: none;
+            &.poick{
+                input{
+                    .col-offsets(margin);
+                }
+            }
+            &.baluta{
+                li{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+form.registration{
+    margin-top: 50px;
+    .size(7);
+    margin-left: auto;
+    color: white;
+    label{
+        display: block;
+        margin-bottom: 10px;
+        span{
+            margin-left: 10px;
+            color: red;
+        }
+    }
+    a{
+        display: block;
+        color: green;
+        margin-bottom: 20px;
+        transition: font-size 1.2s ease , color 1.2s linear;   
+        &:hover{
+            font-size: 20px;
+            color:white;
+        }
+    }
+}
+
+@media screen and (max-width: @break_lg) {
+    nav{
+        .nav{
+            ul{
+                &.menu{
+                    display: none;
+                }
+                &.adantiv{
+                    li:first-child{ //
+                        display: block;
+                    }
+                }
+                &.full{
+                    li{
+                        margin-bottom: 10px;
+                        a{
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }   
+    }  
+}
+@media screen and (max-width: @break_sm) {
+    nav{
+        .nav{
+            #logo{
+                max-width: 80px;
+            }
+            ul{
+                &.nactroiki{
+                    display: none;
+                    li:first-child{
+                        display: none;
+                    }
+                }
+                &.adantiv{
+                    li{
+                        display: block;
+                    }
+                 }
+                 &:not(.adantiv){
+                    flex-direction: column;
+                }
+                &:not(.menu){ //  размер иконок
+                    font-size: 16px;
+                }
+            }
+            form{
+                flex-direction: column;
+                label{
+                    display: flex;
+                    text-align: center;
+                    flex-direction: column;
+                   input{
+                       margin: 15px 0px;
+                   }
+                }
+            }
+        }   
+    }  
+}
+@media screen and (max-width: @break_xs) {
+    nav{
+        .nav{
+            #logo{
+                max-width: 75px;
+            }
+            ul{
+                li{
+                    a{
+                        span{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }  
+}
